@@ -1,9 +1,5 @@
 use std::cmp::max;
 
-fn main() {
-    println!("{}", largest_palindrome_from_product_of_two_numbers());
-}
-
 fn largest_palindrome_from_product_of_two_numbers() -> i64 {
     let mut largest = 0;
     for i in (100..1000).rev() {
@@ -21,5 +17,9 @@ fn is_palindrome(n: i64) -> bool {
     let num_str = n.to_string();
     let reversed_num_str = num_str.chars().rev().collect::<String>();
     num_str == reversed_num_str
+}
+
+fn main() {
+    println!("{}", largest_palindrome_from_product_of_two_numbers());
 }
 

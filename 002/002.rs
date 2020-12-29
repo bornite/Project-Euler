@@ -1,5 +1,3 @@
-use std::env;
-
 struct Fibonacci {
     cur: i64,
     next: i64,
@@ -24,14 +22,18 @@ impl Iterator for Fibonacci {
     }
 }
 
-fn main() {
-    let args: Vec<String> = env::args().collect();
-    let n: i64 = args[1].parse().unwrap();
+fn sum_of_even_fibonacci_seq(limit: i64) -> i64 {
     let s: i64 = Fibonacci::new()
         // filter by even.
         .filter(|&f| f % 2 == 0)
-        // filter under limit n.
-        .take_while(|&f| f <= n)
+        // filter under limit.
+        .take_while(|&f| f <= limit)
         .sum();
+    return s;
+}
+
+fn main() {
+    let n: i64 = 4000000;
+    let s: i64 = sum_of_even_fibonacci_seq(n);
     println!("{}", s);
 }
