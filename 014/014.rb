@@ -10,7 +10,7 @@ end
   
 length = [0, 1]
 2.step(1000000, 1) do |n|
-   length[n] = collaz_sequence(n, 0)
+   length[n] = get_length_collaz_sequence(n, 0)
 end
 
 p length.max
