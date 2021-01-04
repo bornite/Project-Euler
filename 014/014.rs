@@ -17,7 +17,6 @@ fn get_length_of_terms_collatz_sequence(n: u64) -> u64 {
 }
 
 fn main() {
-    let mut n: u64;
     let mut max_len_of_seqs: (u64, u64); /* (number, Length of the Collatz sequence starting from `number`) */
     max_len_of_seqs = (1, 1);
     for n in 2..1000000+1 {
