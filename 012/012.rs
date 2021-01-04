@@ -31,7 +31,7 @@ fn get_num_of_divisors(n: u64) -> u64 {
     println!("{:?}", facto);
 
     let mut prod: u64 = 1;
-    for (base, expo) in facto {
+    for (_base, expo) in facto {
         prod = prod * ((expo as u64)+1);
     }
     return prod;
