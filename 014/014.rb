@@ -14,4 +14,4 @@ length = [0, 1]
 end
 
 p length.max
-p length.index(length.max).to_s
+p length.index(length.max)
