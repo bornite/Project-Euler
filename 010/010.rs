@@ -10,7 +10,7 @@ fn gen_prime(primes: &mut Vec<u64>) {
     }
 
     let mut num: u64 =  *primes.last().unwrap();
-    while true {
+    loop {
         let mut no_prime_flag = 0;
         for p in primes.iter_mut() {
             if num % *p == 0 {
