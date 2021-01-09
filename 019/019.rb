@@ -13,6 +13,19 @@ number_of_days_in_month = {
     "Dec": 31,
 }
 
+def is_leap_year(y)
+    ret = false
+    if y % 4 == 0
+       if y % 100 != 0
+          ret = true
+       else
+          if y % 400 == 0
+            ret = true
+          end
+       end
+    end
+end
+
 def count_months_in_which_first_day_is_sunday(number_of_days_in_month)
    count = 0
    days = 1 # 1901-01-01 is Tuesday
@@ -21,9 +34,11 @@ def count_months_in_which_first_day_is_sunday(number_of_days_in_month)
    1901.upto(2000) do |y|
       number_of_days_in_month.each do |month, num_of_days|
          days = days + num_of_days
-         if (y+1).div(4) == 0 && month == :Feb
+         if is_leap_year(y) && month == :Feb
             days = days + 1
          end
+         # Check the day of the week at the end of the month.
+         # 6 is Saturday
          if days % 7 == 6
             count = count + 1
          end
