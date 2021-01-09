@@ -16,13 +16,16 @@ INPUT_DATA = <<EOS
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 EOS
 
-triangle = INPUT_DATA.each_line.map { |line| line.split.map(&:to_i) }
-
-p triangle
-(triangle.length - 2).downto(0) do |y|
-   triangle[y].length.times do |x| 
-      triangle[y][x] += [triangle[y+1][x], triangle[y+1][x+1]].max
+def find_path(triangle)
+   # Search for the path from the bottom and second from the bottom.
+   (triangle.length - 2).downto(0) do |y|
+      triangle[y].length.times do |x|
+         triangle[y][x] += [triangle[y+1][x], triangle[y+1][x+1]].max
+      end
    end
+   triangle[0][0]
 end
-  
-p triangle[0][0]
+
+triangle = INPUT_DATA.each_line.map { |line| line.split.map(&:to_i) }
+p triangle
+p find_path(triangle)
