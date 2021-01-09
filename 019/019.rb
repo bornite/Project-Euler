@@ -48,3 +48,11 @@ def count_months_in_which_first_day_is_sunday(number_of_days_in_month)
 end
 
 p count_months_in_which_first_day_is_sunday(number_of_days_in_month)
+
+#another solution
+require 'date'
+def count_months_in_which_first_day_is_sunday2(start_year, end_year)
+    Date.new(start_year,1,1).upto(Date.new(end_year,12,31)).find_all { |d| d.mday == 1 && d.wday == 0 }.count
+end
+
+p count_months_in_which_first_day_is_sunday2(1901, 2000)
