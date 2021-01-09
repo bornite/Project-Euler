@@ -29,7 +29,7 @@ fn parse(s: &str) -> Vec<Vec<u64>> {
 }
 
 fn find_path(triangle: Vec<Vec<u64>>) -> u64 {
-    let mut graph: Vec<Vec<u64>> = triangle;
+    let graph: Vec<Vec<u64>> = triangle;
     for row in (0..(graph.len() - 1)).rev() {
         for i in 0..graph[row].len() {
             graph[row][i] += max(graph[row + 1][i], graph[row + 1][i + 1]);
@@ -39,7 +39,7 @@ fn find_path(triangle: Vec<Vec<u64>>) -> u64 {
 }
 
 fn main() {
-    let mut triangle: Vec<Vec<u64>> = parse(INPUT_DATA);
+    let triangle: Vec<Vec<u64>> = parse(INPUT_DATA);
     println!("{:?}", triangle);
     println!("{}", find_path(triangle));
 }
