@@ -1,10 +1,10 @@
-fn power(n: u64, m: u64) -> Vec<u64> {
+fn power_of_2(n: u64) -> Vec<u64> {
     let mut decimal = vec![1];
-    for _ in 0..m {
+    for _ in 0..n {
         let mut carry = 0;
         for i in 0..decimal.len() {
             let mut digit = decimal[i];
-            digit = n * digit + carry;
+            digit = 2 * digit + carry;
             carry = digit / 10;
             decimal[i] = digit % 10;
         }
@@ -17,6 +17,6 @@ fn power(n: u64, m: u64) -> Vec<u64> {
 }
 
 fn main() {
-    println!("{:?}", power(2,1000));
-    println!("{:?}", power(2,1000).iter().sum::<u64>());    
+    println!("{:?}", power_of_2(1000));
+    println!("{:?}", power_of_2(1000).iter().sum::<u64>());
 }
