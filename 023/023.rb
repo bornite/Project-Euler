@@ -9,9 +9,6 @@ def get_divisors(n)
 end
  
 def abundant?(x)
-   if x == 1
-      return true
-   end
    sum_of_divisors_x = get_divisors(x).sum
    if sum_of_divisors_x > x
       return true
