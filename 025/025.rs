@@ -1,31 +1,31 @@
+fn gen_next_term(a: Vec<usize>, b: Vec<usize>) -> Vec<usize> {
+    let mut result = a.clone();
+    let mut carry = 0;
+    for i in 0..b.len() {
+        if i >= result.len() {
+            result.push(0);
+        }
+        let mut digit = result[i];
+        digit = b[i] + digit + carry;
+        carry = digit / 10;
+        result[i] = digit % 10;
+    }
+    if carry > 0 {
+        result.push(carry);
+    }
+    return result;
+}
+
 fn main() {
     let mut a = vec![0];
     let mut b = vec![1];
     let mut n = 1;
     while b.len() < 1000 {
         let tmp = b.clone();
-        let mut carry = 0;
-        for i in 0..b.len() {
-            if i >= a.len() {
-                a.push(0);
-            }
-            let mut digit = a[i];
-            digit = b[i] + digit + carry;
-            carry = digit / 10;
-            a[i] = digit % 10;
-        }
-        if carry > 0 {
-            a.push(carry);
-        }
-        b = a;
+        b = gen_next_term(a, b);
         a = tmp;
         n += 1;
-        println!("{:?}", a);
-        println!("{:?}", b);
-        println!("{}", n);
     }
-    a.reverse();
-    println!("{:?}", a);
     b.reverse();
     println!("{:?}", b);
     println!("{}", n);
