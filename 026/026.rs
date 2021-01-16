@@ -10,7 +10,7 @@ fn cycle_length(n: usize) -> usize {
         seen[remainder] = i;
         remainder = 10 * (remainder % n);
     }
-    0
+    return 0;
 }
 
 fn main() {
