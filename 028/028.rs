@@ -41,7 +41,7 @@ sum[n] = 4n^2 - 6n + 6
 */
 
 fn sum_of_numbers_on_diagonals(n: u64) -> u64 {
-	let sum = (1..n)
+	let sum = (1..n+1)
         .map(|i| {
             let j = 2 * i + 1;
             4 * j * j - 6 * j + 6
@@ -51,5 +51,5 @@ fn sum_of_numbers_on_diagonals(n: u64) -> u64 {
 }
 
 fn main() {
-    println!("{}", sum_of_numbers_on_diagonals(501));
+    println!("{}", sum_of_numbers_on_diagonals(500));
 }
