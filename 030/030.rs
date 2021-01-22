@@ -8,7 +8,6 @@ fn main() {
     for n in 2..999999 {
         if n == sum_of_digit_fifth_powers(n) {
             sum += n;
-            println!("{}", n);
         }
     }
     println!("{}", sum);
