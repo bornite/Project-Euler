@@ -14,20 +14,37 @@ fn is_pandigital(a: i32, b: i32) -> bool {
     }
 } 
 
+/*
+ possible num of digits combinations
+ 1 x 1 = 7 : NG 10 * 10 = 100
+ 1 x 2 = 6 : NG 10 * 100 = 1000
+ 1 x 3 = 5 : NG 10 * 1000 = 10000
+ 1 x 4 = 4 : OK
+ 2 x 2 = 5 : NG 100 * 100 = 10000
+ 2 x 3 = 4 : OK
+ 3 x 3 = 3 : NG 100 * 100 = 10000
+*/
 fn main() {
     let mut pandigitals: Vec<i32> = Vec::new();
-    for a in 1..=4999 {
-        for b in 1..=99 {
+    for a in 1..=9 {
+        for b in 1000..=9999 {
             if is_pandigital(a,b) {
                 pandigitals.push(a*b);
             }
         }
     }
+    for a in 10..=99 {
+        for b in 100..=999 {
+            if is_pandigital(a,b) {
+                pandigitals.push(a*b);
+            }
+        }
+    }
+
     println!("{:?}", pandigitals);
     let pandigitals_uniq: HashSet<i32> = pandigitals.into_iter().collect();
     println!("{:?}", pandigitals_uniq);
-    let mut sum: i32;
-    sum = 0i32;
+    let mut sum: i32 = 0;
     for v in pandigitals_uniq.iter() {
         sum += v;
     }
