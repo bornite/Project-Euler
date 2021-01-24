@@ -20,8 +20,8 @@ fn is_pandigital(a: i32, b: i32) -> bool {
 
 fn main() {
     let mut pandigitals: Vec<i32> = Vec::new();
-    for a in (1..=4999) {
-        for b in (1..=99) {
+    for a in 1..=4999 {
+        for b in 1..=99 {
             if is_pandigital(a,b) {
                 pandigitals.push(a*b);
             }
