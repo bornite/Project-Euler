@@ -24,7 +24,7 @@ fn digit_factorial_sum ( number : u64 ) -> u64 {
 }
 
 fn main() {
-    let upper_bound = 2177281; //9999999 //1854721;
+    let upper_bound = 9999999;
     
     let mut sum = 0;
     for i in 10..upper_bound {

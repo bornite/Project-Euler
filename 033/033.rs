@@ -8,7 +8,9 @@ fn main() {
 
     for denominator in 10..100 {
         for numerator in 10..denominator {
-            if numerator % 10 == 0 && denominator % 10 == 0 { continue }
+            if numerator % 10 == 0 && denominator % 10 == 0 {
+                continue;
+            }
         
             let ratio = Ratio{ numerator:numerator, denominator:denominator };
             
@@ -47,18 +49,17 @@ fn main() {
             // lazy special case after having found it out
             let mut red_num = new_num_str.parse().unwrap();
             let mut red_den = new_den_str.parse().unwrap();
-            
+
             if numerator == 49 && denominator == 98 {
                 red_num = 1;
                 red_den = 2;
             }
-            
+
             let reduced_ratio = Ratio{
                 numerator: red_num,
                 denominator: red_den
             };
-                
-            
+
             if reduced_ratio.denominator != 0 && reduced_ratio.numerator != 0 
                && num_red && den_red 
                && ratio.numerator / reduced_ratio.numerator == ratio.denominator / reduced_ratio.denominator
@@ -69,5 +70,4 @@ fn main() {
             }
         }
     }
-    println!("{}", counter);
 }
