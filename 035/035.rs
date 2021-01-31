@@ -36,7 +36,7 @@ fn is_circular_prime(prime:u64) -> bool {
 fn get_circular_primes(limit: u64) -> Vec<u64> {
     let mut circular_primes: Vec<u64> = Vec::new();
 
-    for i in (2u64..=limit) {
+    for i in 2u64..=limit {
         if is_prime(i) {
             if is_circular_prime(i) {
                 println!("{}", i);
