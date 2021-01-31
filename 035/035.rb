@@ -15,7 +15,7 @@ def rotate(n)
 end
   
 answer = [2]
-3.step(1000000, 2) do |i|
+3.step(1_000_000, 2) do |i|
    next if !i.prime?
    if circular(i).inject(true) { |sum, j| sum = sum && j.to_i.prime? }
       answer.push(i)
