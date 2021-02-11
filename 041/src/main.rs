@@ -48,6 +48,11 @@ fn find_biggest_pandigital_prime(prime_numbers:&[u64]) -> Option<u64> {
 }
 
 fn main() {
+    /*
+    1 + 2 + ... + 9 = 45 (dividable by 9 => 9-pandigimal number is dividable by 9)
+    1 + 2 + ... + 8 = 36 (dividable by 9 => 8-pandigimal number is dividable by 9)
+    7-pandigimal is the largest pandigimal prime.
+    */
     let max_prime = 7654321;
     let prime_numbers = get_prime_vec(max_prime);
     if let Some(biggest_pandigital_prime) = find_biggest_pandigital_prime(&prime_numbers) {
