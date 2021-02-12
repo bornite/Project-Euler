@@ -1,6 +1,6 @@
 [package]
 
-name = "Problem_038"
+name = "problem_038"
 version = "0.0.1"
 
 [dependencies]
