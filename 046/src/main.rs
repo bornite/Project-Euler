@@ -68,9 +68,9 @@ fn get_odd_composites(n: u64) -> HashSet<u64> {
 }
 
 fn main() {
-    let mut primes: Vec<u64> = get_primes(10_000);
-    let mut twice_squares: Vec<u64> = get_twice_squares(100);
-    let mut odd_composites: HashSet<u64> = get_odd_composites(10_000);
+    let primes: Vec<u64> = get_primes(10_000);
+    let twice_squares: Vec<u64> = get_twice_squares(100);
+    let odd_composites: HashSet<u64> = get_odd_composites(10_000);
 
     let mut product = HashSet::new();
     for p in &primes {
