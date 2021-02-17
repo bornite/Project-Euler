@@ -1,6 +1,11 @@
 require 'prime'
 
-def largest_prime_factor_of(n) = n.prime_division.map(&:first).max
+class Problem003
+	def largest_prime_factor_of(n) = n.prime_division.map(&:first).max
 
-n = 600851475143
-p largest_prime_factor_of(n)
+	def compute()
+		n = 600851475143
+		largest_prime_factor_of(n)
+	end
+end
+p Problem003.new().compute()
