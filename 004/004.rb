@@ -6,8 +6,6 @@ class Problem004
   end
 
   def compute()
-    s = [*10..99]
-    largest_palindrome_from_product_of_two_numbers(s)
     s = [*100..999]
     largest_palindrome_from_product_of_two_numbers(s)
   end
