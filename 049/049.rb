@@ -20,7 +20,8 @@ class Problem049
   end
 
   def compute()
-    get_arithmetic_sequence((1000..9999))
+    a = get_arithmetic_sequence((1000..9999))
+    a[1].inject("") { |answer, x| answer += x.to_s }
   end
 end
-p Problem049.new().compute()[1]
+p Problem049.new().compute()
