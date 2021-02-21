@@ -30,7 +30,6 @@ class Problem005
    def compute()
       n = 20
       h = hash_of_least_common_multiple(n)
-      p h
       compute_lcm_from_hash(h)
    end
 end
