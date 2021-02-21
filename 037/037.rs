@@ -1,22 +1,18 @@
-pub fn is_prime(n: u64) -> bool {
+fn is_prime(n: u64) -> bool {
     match n {
         0 => false,
         1 => false,
         2 => true,
         3 => true,
         n if n % 2 == 0 => false,
-        n if n % 3 == 0 => false,
         _ => {
-            let sqrt = (n as f32).sqrt() as u64;
-            let mut base = 6;
+            let sqrt = (n as f64).sqrt() as u64;
+            let mut base = 3;
             while base <= sqrt {
-                if n % (base - 1) == 0 {
+                if n % base == 0 {
                     return false;
                 }
-                if n % (base + 1) == 0 {
-                    return false;
-                }
-                base += 6;
+                base += 2;
             }
             true
         }
