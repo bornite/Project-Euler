@@ -58,7 +58,7 @@ fn permutations(mut digits: Vec<u64>) -> impl Iterator<Item = Vec<u64>> {
 fn main() {
 	let primes = gen_primes(10_000);
     let mut prime_perm_seq = vec![];
-	'nxt_prime:for &prime in primes.iter() {
+	for &prime in primes.iter() {
 		if prime < 1000 { continue };
 
 		// parse digits
