@@ -44,3 +44,4 @@ class Problem051
     end
   end
 end
+p Problem051.new().compute()
