@@ -36,8 +36,7 @@ class Problem051
         masked.each do |m|
           candidates[m] << p 
           if candidates[m].size >= 8
-            puts candidates[m].min
-            exit
+            return candidates[m].min
           end
         end
       end
