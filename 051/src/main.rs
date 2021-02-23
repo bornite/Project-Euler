@@ -63,7 +63,7 @@ fn main() {
 		'd: for digit in (0..10u8).filter(|d| prime_digits.contains(&d)) { //'
 			let digits = normalised_digits(&prime_digits, digit);
 
-			let mut nr_replaceables = digits.iter()
+			let nr_replaceables = digits.iter()
 				.filter(|&d| *d == Digit::Any)
 				.count();
 
@@ -94,7 +94,7 @@ fn main() {
 
 			if primes_in_family == n_family {
 				// success!
-				println!("Answer: {}", prime);
+				println!("{}", prime);
 				break 'pr;
 			}
 		}
