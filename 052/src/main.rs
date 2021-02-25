@@ -4,10 +4,6 @@ fn next_order_of_magnitude ( num:u64 ) -> u64 {
 	next
 }
 
-fn check_same_digits(n1: u64, n2: u64) -> bool {
-    
-}
-
 fn main() {
 	let mut num = 9;
 	'num:loop {
