@@ -1,9 +1,3 @@
-fn next_order_of_magnitude ( num:u64 ) -> u64 {
-	let mut next = 10;
-	while next < num { next *= 10 }
-	next
-}
-
 fn check_same_digits (n1: u64, n2: u64) -> bool {
 	let mut bytes1 = n1.to_string().into_bytes();
 	let mut bytes2 = n2.to_string().into_bytes();
