@@ -19,7 +19,6 @@ fn main() {
 
     for n in 23..=100 {
         for r in 1..n {
-            println!("{}, {}", n, r);
             let num: BigUint = comb(n, r);
             if num < limit {continue;}
             answer += 1;
