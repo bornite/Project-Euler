@@ -241,12 +241,8 @@ Table of rank.
   end
 
   def game(player1_hand, player2_hand)
-    puts "---"
-    puts player1_hand.to_s, "vs", player2_hand.to_s
-    puts "==="
     player1_hand_rank = get_rank_of_hand(player1_hand.sort)
     player2_hand_rank = get_rank_of_hand(player2_hand.sort)
-    p player1_hand_rank, player2_hand_rank
     if player1_hand_rank[:rank] > player2_hand_rank[:rank]
       return true
     end
@@ -265,7 +261,6 @@ Table of rank.
         player1_hand = data[0..4]
         player2_hand = data[5..9]
         if game(player1_hand, player2_hand)
-          puts "player1 win."
           count_wins_of_player1 += 1
         end
       end
