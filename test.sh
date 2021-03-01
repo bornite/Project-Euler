@@ -1,4 +1,4 @@
-for i in 00{1..2}
+for i in 00{1..9} 0{10..16}
 do
 	echo "--- ${i} ---"
 	cd ${i} && rspec spec/${i}_spec.rb
