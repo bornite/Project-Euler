@@ -14,8 +14,6 @@ fn main() {
 	let mut is_lychrel = [true;10_000];
 
 	'n: for n in 0..10_000 {
-		//if n % 100 == 0 { println!("{}", n); }
-
 		let mut num = n as _;
 		num = &num + reverse(num);
 		let mut reversed = reverse(num);
@@ -29,7 +27,6 @@ fn main() {
 		}
 		is_lychrel[n] = false;
 	}
-
-	let count = is_lychrel.iter().filter(|&&is_lych| is_lych).count();
+	let count = is_lychrel.iter().filter(|&&x| x).count();
 	println!("{}", count);
 }
