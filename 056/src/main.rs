@@ -9,7 +9,6 @@ fn sum_of_digits(num: String) -> u64 {
     for i in num.chars() {
         sum = sum + (i as u64 - 48);
     }
-    println!("sum = {}", sum);
     return sum;
 }
 
@@ -20,8 +19,6 @@ fn main() {
         for b in 1..=100 {
             let x: BigInt = a.into();
             let ret = x.pow(b as u32);
-            println!("a^b = {}", ret);
-            println!("str = {}", ret.to_str_radix(10));
             sum = sum_of_digits(ret.to_str_radix(10));
             if sum > max {
                 max = sum;
