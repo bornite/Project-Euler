@@ -4,3 +4,5 @@ name = "problem_056"
 version = "0.0.1"
 
 [dependencies]
+num-bigint = "0.3"
+num-traits = "0.2.14"
