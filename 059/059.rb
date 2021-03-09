@@ -1,4 +1,3 @@
-
 class Problem059
     def compute()
         answer = 0
@@ -15,16 +14,13 @@ class Problem059
                         next if answer_arr.select{ |c| c < 32 || 122 < c }.any?
                         text = answer_arr.map(&:chr).inject(&:+)
                         if text.include?(" the ")
-                            p text
                             answer = answer_arr.inject(&:+)
-                            p answer
-                            exit
+                            return answer
                         end
                     end
                 end
             end
         end
-        answer
     end
 end
 p Problem059.new().compute()
