@@ -25,6 +25,7 @@ def get_primes_under(n)
   def compute()
     n = 10000
     count = 0
+    answer = 0
     
     primes = get_primes_under(n)
     prime_pair_set = primes.combination(2).to_a.select { |a| prime_pair?(a[0], a[1]) }
@@ -50,10 +51,11 @@ def get_primes_under(n)
     
         next_set_sum = []
         next_set.each{ |arr| next_set_sum.push(arr.inject(:+)) }
-        p next_set_sum.min
-        return next_set_sum.min if size == 4
         prime_pair_set = next_set
-    end    
+        answer = next_set_sum.min
+        p answer
+    end
+    return answer
   end
 end
 p Problem060.new().compute()
