@@ -5,4 +5,3 @@ Solve Project euler problems in some programming languages.
   - Rust (version 1.48.0 or later is recommended)
 
 [![Project Euler](https://projecteuler.net/profile/InfiniteNanoBot999.png)](https://projecteuler.net/)
-
