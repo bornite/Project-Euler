@@ -1,5 +1,6 @@
 class Problem061
   @@polygonal = []
+  @@result = 0
   def set_polygonal()
     3.upto(8) do |n|
       @@polygonal[n] = []
@@ -40,9 +41,10 @@ class Problem061
         if chain.last.to_s.slice(-2,2) == n.to_s.slice(0,2)
           if edge.empty? && n.to_s.slice(-2,2) == chain.first.to_s.slice(0,2)
             chain.push(n)
-            p chain
-            p chain.inject(:+)
-            exit
+#            p chain
+#            p chain.inject(:+)
+            @@result = chain.inject(:+)
+            return
           elsif edge.any?
             search_cyclical(edge.dup, chain.dup.push(n))
           end
@@ -56,8 +58,8 @@ class Problem061
 
     edges = []
     [*4..8].permutation(5).each{ |a| edges.push(a.unshift(3)) }
-    result = []
-    edges.each{ |edge| result = search_cyclical(edge, []) }
+    edges.each{ |edge| search_cyclical(edge, []) }
+    @@result
   end
 end
-Problem061.new().compute()
+p Problem061.new().compute()
