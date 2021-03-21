@@ -35,7 +35,7 @@ class Problem062
       answer_candidate =  h.select{ |k,v| v.length == 5 }
     #  answer_candidate.push(output) if output.any?
     end
-    answer_candidate.map{ |_, v| v.min }.min
+    answer_candidate.map{ |_, v| v.min }.min.to_i
   end
 end
 p Problem062.new().compute()
