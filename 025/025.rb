@@ -21,7 +21,6 @@ class Problem025
          break if fibo[fibo.size-1].to_s.size == 1_000
       end
 
-      p fibo
       fibo.size
    end
 end
