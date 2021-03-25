@@ -25,3 +25,4 @@ class Problem025
       fibo.size
    end
 end
+p Problem025.new().compute()
