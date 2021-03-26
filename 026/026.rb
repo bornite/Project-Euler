@@ -23,11 +23,16 @@ class Rational
   end
 end
 
-max = 0
-array = (1..1000).map { |d|
-r = Rational(1, d).to_rec_decimal()
-  i = r.index("(")
-  j = r.index(")")
-  cycle_length = (i.nil? || j.nil?) ? 0 : (j - i - 1)
-}
-p array.index(array.max)
+class Problem026
+  def compute()
+    max = 0
+    array = (1..1000).map { |d|
+    r = Rational(1, d).to_rec_decimal()
+      i = r.index("(")
+      j = r.index(")")
+      cycle_length = (i.nil? || j.nil?) ? 0 : (j - i - 1)
+    }
+    return (array.index(array.max)+1)
+  end
+end
+p Problem026.new().compute()
