@@ -9,7 +9,6 @@ class Problem027
 		result = a.to_a.product(b.to_a).map {|a, b|
 			[(0..100).take_while { |n| polynomial(a, b, n).prime? }.count, a , b]
 		}.max
-		p result
 		result[1].to_i * result[2].to_i
 	end
 end
