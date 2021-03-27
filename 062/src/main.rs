@@ -1,3 +1,5 @@
+extern crate itertools;
+use itertools::Itertools;
 
 fn gen_cubic_numbers(limit: usize) -> Vec<i128> {
     let mut vec = Vec::new();
@@ -12,7 +14,15 @@ fn gen_cubic_numbers(limit: usize) -> Vec<i128> {
 }
 
 fn main() {
-    let cubic_numbers = Vec::new();
-    cubic_numbers = gen_cubic_numbers(5);
-    println!("{:?}", cubic_numbers);
+    let mut cubic_numbers = Vec::new();
+    cubic_numbers = gen_cubic_numbers(4);
+    for c in cubic_numbers {
+        let mut digits: Vec<i32> = c.to_string().chars().map(|c| c as i32 - 48).collect();
+        println!("{:?}", digits);
+        let len_digits = digits.len();
+        let it = digits.into_iter().permutations(4);
+        for i in it {
+            println!("{:?}", i);
+        }
+    }
 }
