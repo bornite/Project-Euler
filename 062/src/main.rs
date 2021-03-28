@@ -1,4 +1,3 @@
-extern crate itertools;
 use std::collections::HashMap;
 
 fn gen_cubic_numbers(lower_limit: usize, upper_limit: usize) -> Vec<i128> {
