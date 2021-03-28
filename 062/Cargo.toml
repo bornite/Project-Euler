@@ -1,0 +1,7 @@
+[package]
+
+name = "problem_062"
+version = "0.0.1"
+
+[dependencies]
+itertools = "0.10.0"
