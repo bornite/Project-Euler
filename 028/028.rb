@@ -41,13 +41,14 @@ sum[n] = 4n^2 - 6n + 6
 class Problem028
     # Calculate the sum of the four corners of the n-th spiral.
     def sum_of_nth_spiral(n)
-        (1..n).to_a.map { |i|
+        m = (n / 2)
+        (1..m).to_a.map { |i|
             k = 2 * i + 1
             4 * (k**2) - 6*k + 6
-        }.sum
+        }.sum + 1
     end
     def compute()
-        sum_of_nth_spiral(500) + 1
+        sum_of_nth_spiral(1001)
     end
 end
 p Problem028.new().compute()
