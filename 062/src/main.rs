@@ -21,7 +21,7 @@ fn main() {
     let mut result: HashMap<String, Vec<i128>> = HashMap::new();
 
     for c in cubic_numbers {
-        let mut digits: Vec<char> = c.to_string().chars().collect();
+        let digits: Vec<char> = c.to_string().chars().collect();
         let mut s: Vec<String> = digits.iter().map(|d| d.to_string()).collect();
         s.sort();
         let key: String = s.join("");
