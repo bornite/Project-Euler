@@ -38,7 +38,7 @@ class Problem064
         answer += 1 if arr.length % 2 == 1
 
         n += 1
-        n += 1 if square?(n) # 次の数が平方数ならスキップ
+        n += 1 if square?(n) # If the next number is a square, skip it.
         break if n > 10000
     end
     answer
