@@ -12,6 +12,7 @@ RSpec.describe Problem064 do
       expect(Problem064.new().square?(16)).to eq(true)
     end
   end
+
   describe '#compute' do
     it 'is solve Problem 064' do
       expect(Problem064.new().compute()).to eq(1322)
