@@ -20,7 +20,6 @@ fn sum_of_digits(n: BigUint) -> u32 {
 
 fn main() {
     let upper_bound: usize = 100;
-    let mut result: u32 = 0u32;
     let mut d: BigUint = 1u64.into();
     let mut n: BigUint = 2u64.into();
 
@@ -30,11 +29,9 @@ fn main() {
         
         let c: u64 = get_e_seq(i as u64);
 
-        println!("i:{}, c:{}", i, c);
         d = temp_n.clone();
         n = c * temp_n.clone() + temp_d.clone();
-        println!("d:{}, n:{}", d, n);
     }
-    result = sum_of_digits(n);
+    let result = sum_of_digits(n);
     println!("{}", result);
 }
