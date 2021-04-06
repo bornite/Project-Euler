@@ -4,7 +4,6 @@ class Problem029
 	end
 
 	def compute()
-#		p get_seq_of_distinct_terms((2..5),(2..5)).uniq.count
 		get_seq_of_distinct_terms((2..100),(2..100)).uniq.count
 	end
 end
