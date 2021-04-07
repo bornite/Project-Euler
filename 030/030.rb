@@ -8,3 +8,4 @@ class Problem030
      nums.sum
    end
 end
+p Problem030.new().compute()
