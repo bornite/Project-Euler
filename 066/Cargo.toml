@@ -1,0 +1,8 @@
+[package]
+
+name = "problem_066"
+version = "0.0.1"
+
+[dependencies]
+num-bigint = { version = "0.3.1", default-features = false }
+num-traits = "0.2.14"
