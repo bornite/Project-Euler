@@ -10,9 +10,7 @@ fn main() {
     for d in 2..=1000 {
         let limit_u64: u64 = (d as f64).sqrt() as u64; 
         let limit: BigInt = limit_u64.into();
-        println!("limit:{}", limit);
         if (limit_u64 * limit_u64 == d) {
-            println!("d is Square number:{}", d);
             continue;
         }
         let mut m: BigInt = 0.into();
@@ -24,8 +22,6 @@ fn main() {
      
         let mut denm1: BigInt = 0.into();
         let mut den: BigInt = 1.into();
-    
-        println!("m:{}, dd:{}, a:{}, numm1:{}, num:{}, denm1:{}, den:{}", m, dd, a, numm1, num, denm1, den);
         let mut check: BigInt = 0.into();
 
         while check!= 1.into() {
@@ -43,13 +39,11 @@ fn main() {
             den = a.clone() * denm1.clone() + denm2;
             check = (num.clone())*(num.clone()) - (d.clone())*(den.clone())*(den.clone());
         }
-        println!("m:{}, dd:{}, a:{}, numm1:{}, num:{}, denm1:{}, den:{}", m, dd, a, numm1, num, denm1, den);
         if (num > pmax) {
             pmax = num.clone();
             result = d.clone();
         }    
     }
-
-    println!("result:{}", result);
     println!("pmax:{}", pmax);
+    println!("result:{}", result);
 }
