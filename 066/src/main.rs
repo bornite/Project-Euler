@@ -31,8 +31,8 @@ fn main() {
             a = (limit.clone() + m.clone()) / dd.clone();
      
             let numm2: BigInt = numm1;
-            numm1 = num.clone();
             let denm2: BigInt = denm1;
+            numm1 = num.clone();
             denm1 = den.clone();
 
             num = (a.clone())*(numm1.clone()) + numm2.clone();
