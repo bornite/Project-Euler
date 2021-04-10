@@ -10,7 +10,7 @@ fn main() {
     for d in 2..=1000 {
         let limit_u64: u64 = (d as f64).sqrt() as u64; 
         let limit: BigInt = limit_u64.into();
-        if (limit_u64 * limit_u64 == d) {
+        if limit_u64 * limit_u64 == d {
             continue;
         }
         let mut m: BigInt = 0.into();
@@ -39,7 +39,7 @@ fn main() {
             den = a.clone() * denm1.clone() + denm2;
             check = (num.clone())*(num.clone()) - (d.clone())*(den.clone())*(den.clone());
         }
-        if (num > pmax) {
+        if num > pmax {
             pmax = num.clone();
             result = d.clone();
         }    
