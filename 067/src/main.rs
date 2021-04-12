@@ -25,6 +25,5 @@ fn main() {
 	let data = include_str!("triangle.txt");
     let triangle: Vec<Vec<u64>> = parse(data);
 
-    println!("{:?}", triangle);
     println!("{}", find_path(triangle));
 }
