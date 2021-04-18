@@ -20,7 +20,7 @@ class Problem069
         limit = 1_000_000
         answer = 0
         max = 0
-        2.upto(1_000_000) do |n|
+        2.upto(limit) do |n|
             result = n_divided_by_totient(n)
             if result > max
                 max = result
