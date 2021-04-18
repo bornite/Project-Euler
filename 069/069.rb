@@ -25,7 +25,6 @@ class Problem069
             if result > max
                 max = result
                 answer = n
-                puts "n:#{n} max:#{max}"
             end
         end
         answer
