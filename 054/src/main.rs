@@ -10,7 +10,7 @@ fn check_one_pair(cards: [HashMap<&str, i32>; 5] , hand: &mut HashMap<&str, i32>
     return true;
 }
 
-/*
+/* Table of rank.
   High Card: 1
   One Pair: 2
   Two Pairs: 3
