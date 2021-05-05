@@ -1,4 +1,6 @@
-seq = []
+class Problem040
+  def compute()
+    seq = []
 
 =begin
 Single digit number : 9
@@ -11,16 +13,19 @@ Number of characters in the number between 100,000 and 200,000 -> 100_001 * 6 = 
 Therefore, Number of characters less than or equal to 200,000 = 1,088,895 characters
 =end
 
-(1..200_000).each {|n|
-	numbers = n.to_s.chars
-	numbers.each {|x|
-		seq.push(x)
-	}
-}
+    (1..200_000).each { |n|
+      numbers = n.to_s.chars
+      numbers.each { |x|
+        seq.push(x)
+      }
+    }
 
-idx = [1, 10, 100, 1000, 10000, 100000, 1000000]
-answer = 1
-idx.each {|i|
-	answer *= seq[i-1].to_i
-}
-p answer
+    idx = [1, 10, 100, 1000, 10000, 100000, 1000000]
+    answer = 1
+    idx.each {|i|
+      answer *= seq[i-1].to_i
+    }
+    answer
+  end
+end
+p Problem040.new().compute()
