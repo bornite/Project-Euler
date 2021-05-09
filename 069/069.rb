@@ -7,7 +7,7 @@ class Problem069
         ret = n
         prime_factors = n.prime_division()
         prime_factors.each do |p|
-        ret = ret*(p[0]-1)/p[0]
+          ret = ret*(p[0]-1)/p[0]
         end
         ret
     end
