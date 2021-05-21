@@ -16,7 +16,6 @@ max = 1500000
     next if hcf(n, m) != 1
     l = 2*m*(m+n)
     break if l >= max
-    # p "m = #{m}, n = #{n}, l = #{l}"
     if l < 100
       l_arr.push([*1..(max/l).floor].map{ |i| i*l }).flatten!
     else
