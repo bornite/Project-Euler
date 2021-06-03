@@ -15,3 +15,4 @@ class Problem080
     sum
   end
 end
+p Problem080.new().compute()
