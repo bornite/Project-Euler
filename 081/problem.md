@@ -13,4 +13,4 @@ In the 5 by 5 matrix below, the minimal path sum from the top left to the bottom
 805 & 732 & 524 & {\color{red}37} & {\color{red}331} \\
 \end{pmatrix}
 
-Find the minimal path sum from the top left to the bottom right by only moving right and down in matrix.txt (right click and "Save Link/Target As..."), a 31K text file containing an 80 by 80 matrix.
+Find the minimal path sum from the top left to the bottom right by only moving right and down in [matrix.txt](https://projecteuler.net/project/resources/p081_matrix.txt) (right click and "Save Link/Target As..."), a 31K text file containing an 80 by 80 matrix.
