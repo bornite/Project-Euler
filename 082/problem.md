@@ -15,4 +15,4 @@ The minimal path sum in the 5 by 5 matrix below, by starting in any cell in the 
 805 & 732 & 524 & 37 & 331 \\
 \end{pmatrix}
 
-Find the minimal path sum from the left column to the right column in matrix.txt (right click and "Save Link/Target As..."), a 31K text file containing an 80 by 80 matrix.
+Find the minimal path sum from the left column to the right column in [matrix.txt](https://projecteuler.net/project/resources/p082_matrix.txt) (right click and "Save Link/Target As..."), a 31K text file containing an 80 by 80 matrix.
