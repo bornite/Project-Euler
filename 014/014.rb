@@ -11,7 +11,7 @@ class Problem014
     
   def compute()
     length = [0, 1]
-    2.step(1000000, 1) do |n|
+    (2..1_000_000).to_a.each do |n|
        length[n] = get_length_collaz_sequence(n, 0)
     end
     length.index(length.max)
