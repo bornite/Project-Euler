@@ -3,6 +3,8 @@ class Problem014
   def get_length_collaz_sequence(n, count)
      if n == 1
         return count+1
+     elsif @@length.has_key?(n)
+        return count + @@length[n]
      elsif n.even?
         return get_length_collaz_sequence(n.to_i/2, count+1)
      else
