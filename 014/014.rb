@@ -16,7 +16,8 @@ class Problem014
        @@length[n] = get_length_collaz_sequence(n, 0)
     end
     #length.index(length.max)
-    @@length.max{ |x, y| x[1] <=> y[1] }
+    max = @@length.max{ |x, y| x[1] <=> y[1] }
+    return max[0]
   end
 end
 p Problem014.new().compute()
