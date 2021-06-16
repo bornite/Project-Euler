@@ -108,7 +108,7 @@ class Problem084
 
     sum = @p.sum
     @p.map!.with_index{ |p, i| { p: (p/sum.to_f*100).round(3), i: i } }.sort_by!{ |h| -h[:p] } # .map!{ |h| h[:i] }
-    @p
+    @p[0][:i].to_s + @p[1][:i].to_s + @p[2][:i].to_s
   end
 end
 p Problem084.new().compute()
