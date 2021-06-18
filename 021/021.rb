@@ -1,7 +1,8 @@
 class Problem021
    def get_divisors(n)
       result = []
-      (1..n-1).each do |x|
+#      (1..n-1).each do |x|
+      (1..(n/2)).each do |x|
          if n % x == 0
          result.push(x)
          end
@@ -23,7 +24,7 @@ class Problem021
 
    def compute()
       amicable_numbers = []
-      (1..10000).each do |n|
+      (1..10_000).each do |n|
          if is_amicable(n)
             amicable_numbers.push(n)
          end
