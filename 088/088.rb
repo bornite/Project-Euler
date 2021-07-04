@@ -42,8 +42,6 @@ class Problem088
                 k = pd.length+(n-pd.sum)
                 if arr[k].nil? && k <= max
                     arr[k] = n
-#                    p pd
-#                    p "arr[#{k}] = #{n}"
                 end
             end
             break if arr.length == max+1 && !arr[2..max].include?(nil)
