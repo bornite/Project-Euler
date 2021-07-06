@@ -35,7 +35,7 @@ def change_val_to_roman(val)
 end
 
 delegation = 0
-File.open("roman.txt") do |f|
+File.open("p089_roman.txt") do |f|
   f.each_line.with_index do |line, i|
     original = line.gsub(/\n/, '')
     val = change_roman_to_val(original.clone)
