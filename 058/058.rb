@@ -25,7 +25,7 @@ class Problem058
         end
         arr_len += 4
         ratio = (prime_len/arr_len.to_f)
-        p "n = #{n}, ratio = #{ratio}"
+        #p "n = #{n}, ratio = #{ratio}"
         break if ratio < 0.1
         n += 2
     end
