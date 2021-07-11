@@ -35,8 +35,8 @@ class Problem023
   end
 
   def compute()
-    sum_of_two_abundant_numbers = get_written_as_sum_of_two_abundant_numbers()
-    (1..28123).reject{ |n| sum_of_two_abundant_numbers.include?(n) }.reduce(:+)
+    written_as_sum_of_two_abundant_numbers = get_written_as_sum_of_two_abundant_numbers()
+    (1..28123).reject{ |n| written_as_sum_of_two_abundant_numbers.include?(n) }.reduce(:+)
   end
 end
 p Problem023.new().compute()
